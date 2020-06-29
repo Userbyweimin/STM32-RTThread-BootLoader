@@ -30,6 +30,8 @@
 #include <rtdbg.h>
 #include <rt_fota.h>
 
+#include "iot_init.h"
+
 /* defined the LED0 pin: PB1 */
 #define LED0_PIN    GET_PIN(C, 13)
 
@@ -56,8 +58,10 @@ int main(void)
 		#if defined(RT_USING_FINSH) && defined(FINSH_USING_MSH)
 			finsh_set_prompt("rt-fota />");
 		#endif
+    iot_init();
     extern void rt_fota_init(void);
     rt_fota_init();
+
 
     return RT_EOK;
 }

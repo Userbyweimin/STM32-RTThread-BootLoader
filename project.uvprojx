@@ -482,6 +482,11 @@
               <FileType>1</FileType>
               <FilePath>applications\rt_fota_crc.c</FilePath>
             </File>
+            <File>
+              <FileName>iot_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\iot_init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

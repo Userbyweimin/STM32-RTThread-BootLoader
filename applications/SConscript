@@ -9,6 +9,7 @@ spi_flash_init.c
 fal_flash_stm32f4_port.c
 rt_fota.c
 rt_fota_crc.c
+iot_init.c
 """)
 
 group = DefineGroup('Applications', src, depend = [''], CPPPATH = CPPPATH)

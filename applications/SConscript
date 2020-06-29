@@ -5,7 +5,6 @@ cwd     = GetCurrentDir()
 CPPPATH = [cwd, str(Dir('#'))]
 src     = Split("""
 main.c
-spi_flash_init.c
 fal_flash_stm32f4_port.c
 rt_fota.c
 rt_fota_crc.c

@@ -120,6 +120,7 @@
 /* protocol stack implement */
 
 #define SAL_USING_LWIP
+#define SAL_USING_TLS
 #define SAL_USING_POSIX
 
 /* Network interface device */
@@ -188,6 +189,8 @@
 
 /* IoT - internet of things */
 
+#define PKG_USING_CJSON
+#define PKG_USING_CJSON_V102
 #define PKG_USING_LIBMODBUS
 #define PKG_USING_LIBMODBUS_RTU
 #define HAVE_DECL_TIOCSRS485 1
@@ -206,6 +209,36 @@
 
 /* IoT Cloud */
 
+#define PKG_USING_ALI_IOTKIT
+#define PKG_USING_ALI_IOTKIT_PRODUCT_KEY "a1PPFfaLks8"
+#define PKG_USING_ALI_IOTKIT_PRODUCT_SECRET "ipnERTZwIbe5e6U6"
+#define PKG_USING_ALI_IOTKIT_DEVICE_NAME "Hall1"
+#define PKG_USING_ALI_IOTKIT_DEVICE_SECRET "fa90b9febbc9c12741f222053ddcf198"
+#define PKG_ALI_IOTKIT_SELECT_ITEM
+#define PLATFORM_HAS_STDINT
+#define PLATFORM_HAS_DYNMEM
+#define PLATFORM_HAS_OS
+#define INFRA_STRING
+#define INFRA_NET
+#define INFRA_LIST
+#define INFRA_TIMER
+#define INFRA_JSON_PARSER
+#define INFRA_MD5
+#define INFRA_SHA256
+#define INFRA_REPORT
+#define INFRA_HTTPC
+#define INFRA_COMPAT
+#define DEV_SIGN
+#define MQTT_COMM_ENABLED
+
+/* MQTT Configurations */
+
+#define MQTT_DEFAULT_IMPL
+#define MQTT_DIRECT
+#define DEVICE_MODEL_CLASSIC
+#define OTA_ENABLED
+#define PKG_USING_ALI_IOTKIT_V30001
+#define PKG_ALI_IOTKIT_VER_NUM 0x30001
 #define PKG_USING_OTA_DOWNLOADER
 #define OTA_DOWNLOADER_DEBUG
 #define PKG_USING_YMODEM_OTA
@@ -213,6 +246,16 @@
 
 /* security packages */
 
+#define PKG_USING_MBEDTLS
+
+/* Select Root Certificate */
+
+#define MBEDTLS_AES_ROM_TABLES
+#define MBEDTLS_ECP_WINDOW_SIZE 2
+#define MBEDTLS_SSL_MAX_CONTENT_LEN 3584
+#define MBEDTLS_MPI_MAX_SIZE 1024
+#define MBEDTLS_CTR_DRBG_KEYSIZE 32
+#define PKG_USING_MBEDTLS_V2710
 #define PKG_USING_TINYCRYPT
 #define PKG_USING_TINYCRYPT_V100
 #define TINY_CRYPT_MD5

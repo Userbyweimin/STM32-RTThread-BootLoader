@@ -4,7 +4,7 @@
  * @Autor: JunQi Liu
  * @Date: 2020-06-29 22:58:00
  * @LastEditors: JunQi Liu
- * @LastEditTime: 2020-06-30 04:04:25
+ * @LastEditTime: 2020-06-30 21:36:35
  * @FilePath: \STM32-RTThread-BootLoader\applications\iot_init.c
  */ 
 #include <rtthread.h>
@@ -14,6 +14,18 @@
 #include "spi_flash.h"
 #include "spi_flash_sfud.h"
 #include "drv_spi.h"
+
+#define DBG_ENABLE
+#define DBG_SECTION_NAME                    "iot_init"
+
+#ifdef RT_MAIN_DEBUG
+#define DBG_LEVEL                           DBG_LOG
+#else
+#define DBG_LEVEL                           DBG_INFO
+#endif
+
+#define DBG_COLOR
+#include <rtdbg.h>
 
 static void MX_GPIO_Init(void);
 /**

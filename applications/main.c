@@ -64,14 +64,14 @@ int main(void)
     fal_init(); 
     // extern void rt_fota_init(void);
     // rt_fota_init();
-    while(1)
-    {
-        time_t now;
-        /* output current time */
-        now = time(RT_NULL) - 8*60*60;
-        LOG_I("time:  %d\n",now);
-        rt_thread_mdelay(1000);
-    }
+    // while(1)
+    // {
+    //     time_t now;
+    //     /* output current time */
+    //     now = time(RT_NULL) - 8*60*60;
+    //     LOG_I("time:  %d\n",now);
+    //     rt_thread_mdelay(1000);
+    // }
     
 
 

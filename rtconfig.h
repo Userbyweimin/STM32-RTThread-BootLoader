@@ -90,7 +90,10 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 512
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
+#define RT_USING_RTC
 #define RT_USING_SPI
 #define RT_USING_QSPI
 #define RT_USING_SFUD
@@ -238,6 +241,9 @@
 
 /* signalLed Options */
 
+#define PKG_USING_EXTERN_RTC_DRIVERS
+#define PKG_USING_DS3231
+#define PKG_USING_DS3231_V100
 #define BSP_USING_SPI1
 
 /* miscellaneous packages */
@@ -268,6 +274,9 @@
 #define BSP_USING_UART
 #define BSP_USING_UART1
 #define BSP_USING_UART2
+#define BSP_USING_I2C1
+#define BSP_I2C1_SCL_PIN 24
+#define BSP_I2C1_SDA_PIN 25
 #define BSP_USING_SPI_FLASH
 #define BSP_USING_ON_CHIP_FLASH
 

@@ -109,6 +109,7 @@
 
 #define RT_USING_LIBC
 #define RT_USING_POSIX
+#define RT_USING_POSIX_TERMIOS
 
 /* Network */
 
@@ -187,6 +188,13 @@
 
 /* IoT - internet of things */
 
+#define PKG_USING_LIBMODBUS
+#define PKG_USING_LIBMODBUS_RTU
+#define HAVE_DECL_TIOCSRS485 1
+#define HAVE_DECL_TIOCM_RTS 1
+#define PKG_USING_LIBMODBUS_RTU_EXAMPLE
+#define PKG_USING_LIBMODBUS_LATEST_VERSION
+#define PKG_LIBMODBUS_VER_NUM 0x99999
 
 /* Wi-Fi */
 

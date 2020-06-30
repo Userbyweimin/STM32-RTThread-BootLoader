@@ -60,6 +60,10 @@ typedef struct _TLSDataParams {
     mbedtls_pk_context pkey;          /**< mbed TLS Client key. */
 } TLSDataParams_t, *TLSDataParams_pt;
 
+void HAL_Printf(const char *fmt, ...);
+void *HAL_Malloc(uint32_t size);
+void HAL_Free(void *ptr);
+
 static unsigned int _avRandom()
 {
     return (((unsigned int)rand() << 16) + rand());

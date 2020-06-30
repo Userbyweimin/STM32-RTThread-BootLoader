@@ -13,12 +13,13 @@
 
 #include "wrappers_defs.h"
 #include "board.h"
-#include "easyflash.h"
+
 
 #define DBG_TAG                        "ali.wrap"
 #define DBG_LVL                        DBG_INFO
 #include <rtdbg.h>
-#include "app_log.h"
+
+#define APP_VERSION			  "0.1.0"
 
 #if defined(PKG_USING_ALI_IOTKIT_PRODUCT_KEY)
 	#define  ALI_IOTKIT_PRODUCT_KEY			PKG_USING_ALI_IOTKIT_PRODUCT_KEY
@@ -77,11 +78,11 @@ int HAL_SetDeviceSecret(char* device_secret)
         return -1;
 	}
 
-	if (ef_set_env_blob("DeviceSecret", device_secret, len) != EF_NO_ERR)
-	{
-		LOG_D("DeviceSecret write error.");
-		return -2;
-	}
+//	if (ef_set_env_blob("DeviceSecret", device_secret, len) != EF_NO_ERR)
+//	{
+//		LOG_D("DeviceSecret write error.");
+//		return -2;
+//	}
 
     return len;
 }
@@ -124,7 +125,7 @@ int HAL_GetProductSecret(char product_secret[IOTX_PRODUCT_SECRET_LEN + 1])
 
 int HAL_GetDeviceName(char device_name[IOTX_DEVICE_NAME_LEN + 1])
 {
-	/* DeviceName π”√MCUµƒUIDµƒ«∞8∏ˆ◊÷Ω⁄ */
+	/* DeviceName‰ΩøÁî®MCUÁöÑUIDÁöÑÂâç8‰∏™Â≠óËäÇ */
     rt_memset(device_name, 0x0, IOTX_DEVICE_NAME_LEN + 1);
     rt_snprintf(device_name, IOTX_DEVICE_NAME_LEN, "%08x%08x", HAL_GetUIDw1(), HAL_GetUIDw0());
 

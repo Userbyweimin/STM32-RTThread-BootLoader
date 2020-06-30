@@ -46,6 +46,10 @@
 #endif
 #endif
 
+#ifndef O_NDELAY
+#define O_NDELAY    1 /* same as O_NONBLOCK, for compatibility */
+#endif
+
 #else
 #define O_RDONLY         00
 #define O_WRONLY         01
